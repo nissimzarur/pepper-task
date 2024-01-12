@@ -10,7 +10,7 @@ import {CommonActions} from '@react-navigation/native';
 
 const ErrorScreen = ({navigation}: any) => {
   usePreventGoBack(navigation);
-  
+
   const homeBtn = () => {
     navigation.dispatch(
       CommonActions.reset({
@@ -23,7 +23,10 @@ const ErrorScreen = ({navigation}: any) => {
     <Screen scroll={false}>
       <Box style={Styles.errorTextWrapper}>
         <Text status="danger" type="bold">
-          מצטערים, פעולה זו אינה זמינה כרגע
+          מצטערים,
+        </Text>
+        <Text status="danger" type="bold">
+          פעולה זו אינה זמינה כרגע
         </Text>
       </Box>
       <Spacer size="lg" />

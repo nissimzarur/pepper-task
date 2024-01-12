@@ -13,12 +13,6 @@ import useGetContacts from './hooks/useGetContacts';
 import { CommonActions } from '@react-navigation/native';
 
 const HomeScreen = observer(({navigation}: any) => {
-  // navigation.dispatch(
-  //   CommonActions.reset({
-  //     index: 0,
-  //     routes: [{ name: 'Home' }],
-  //   })
-  // );
   useGetContacts()
   const username = userStore.loggedUser.username || '';
   const balance = accountStore.info.balance || 0;

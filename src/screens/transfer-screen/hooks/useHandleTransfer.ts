@@ -19,7 +19,7 @@ const useHandleTransfer = () => {
   return {
     handleTransferInput,
     transferAmount,
-    isBtnDisabled: parseInt(transferAmount) > accountStore.info.balance,
+    isBtnDisabled: !parseInt(transferAmount) || parseInt(transferAmount) > accountStore.info.balance,
   };
 };
 
